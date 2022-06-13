@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+    <title>login & Register</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="form-container">
+            <div class="signin-signup">
+
+                <!-- *********************  SIGN IN FORM ********************************** -->
+
+                <form action="" class="sign-in">
+
+                    <div class="head-topic">
+                        <h4 class="topic">Sign in</h4>
+                    </div>
+
+                    <div class="lg-Username">
+                        <label for="usname" class="title">Username</label><br>
+                        <div class="input-field usname">
+                            <input type="text" id="usname" name="usname" placeholder="Username" maxlength="10" required>
+                        </div>
+                        <span id="lg-username-noti"></span>
+                    </div>
+
+                    <div class="lg-password">
+                        <label for="pw" class="title">Password</label><br>
+                        <div class="input-field pw">
+                            <input type="password" id="pw" name="pw" placeholder="Password" required><br>
+                        </div>
+                        <span id="lg-password-noti"></span>
+                    </div>
+
+                    <div class="lg-submit" onclick="validation2()">
+                        <input type="submit" value="Login" class="lg-btn">
+                    </div>
+
+                </form>
+
+
+                <!-- *********************** SIGN UP FORM *********************************** -->
+
+                <form action="" class="sign-up" id="sign-up">
+
+                    <div class="head-topic">
+                        <h4 class="topic">Sign up</h4>
+                    </div>
+
+                    <div class="name">
+                        <label for="fname" class="title">First Name</label><br>
+                        <div class="input-name fname" >
+                            <input type="text" id="fname" name="fname" placeholder="First Name" maxlength="30" required>
+                        </div>
+                        <span id="fname-noti"></span>
+                    </div>
+
+                    <div class="name">
+                        <label for="lname" class="title">Last Name</label><br>
+                        <div class="input-name lname">
+                            <input type="text" id="lname" name="lname" placeholder="Last Name" maxlength="30" required><br>
+                        </div>
+                        <span id="lname-noti"></span>
+                    </div>
+
+                    <div class="birth">
+                        <label for="" class="title">Birthday</label><br>
+
+                        <div class="dob">
+                            <div class="input-birth date-input">
+                                <input type="date" id="date-input" name="date" required><br>
+
+                            </div>
+                        </div>
+
+                        <div class="dob">
+                            <div class="input-birth-btn" onclick="ageCalculate()">
+                                <span>Calculate age</span>
+
+                            </div>
+                        </div>
+
+                        <span id="dob-noti"></span>
+
+                    </div>
+
+                    <div class="Age">
+
+                        <label for="year" class="title">Age</label><br><br>
+
+                        <div class="age">
+                            <label for="year" class="age-title">Year</label><br>
+                            <div class="input-age" id="input-age">
+                                <span id="year">-</span>
+                            </div>
+                        </div>
+
+                        <div class="age">
+                            <label for="month" class="age-title">Month</label><br>
+                            <div class="input-age" id="input-age">
+                                <span id="month">-</span>
+                            </div>
+                        </div>
+
+                        <div class="age">
+                            <label for="date" class="age-title">Date</label><br>
+                            <div class="input-age" id="input-age">
+                                <span id="day">-</span>
+                            </div>
+                        </div> 
+                        <span id="age-noti"></span>
+                    </div>
+
+                    <div class="address">
+                        <label for="add" class="title">Address</label><br>
+                        <div class="input-address">
+                            <textarea name="add" id="address" rows="5" cols="30" placeholder="Addreass"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="log">
+                        <label for="eml" class="title">Email</label><br>
+                        <div class="input-log eml">
+                            <input type="email" id="eml" name="eml" placeholder="Email" required><br>
+
+                        </div>
+                        <span id="email-noti"></span>
+                    </div> 
+
+                    <div class="log">
+                        <label for="uname" class="title">Username</label><br>
+                        <div class="input-log uname">
+                            <input type="text" id="uname" name="uname" placeholder="Username" maxlength="10" required>
+                        </div>
+                        <span id="uname-noti"></span>
+                    </div> 
+
+                    <br>
+
+                    <div class="password">
+                        <label for="psw" class="title">Password</label><br>
+                        <div class="input-password psw1">
+                            <input type="password" id="psw" name="psw" placeholder="Password" required>
+                        </div>
+                        <span id="psw1-noti"></span>
+                    </div>
+
+                    <div class="password">
+                        <label for="psw2" class="title">Reconform Password</label><br>
+                        <div class="input-password psw2">
+                            <input type="password" id="psw2" name="psw2" placeholder="Re-Password" required>
+                        </div>
+                        <span id="psw2-noti"></span>
+                    </div>
+
+                    <div class="agree">
+                        <input type="checkbox" id="terms" name="terms" value="agree" required>
+                        <label for="terms" class="title"> Agree to terms and conditions</label>
+                    </div>
+
+                    <div class="signup-submit" onclick="validation()">
+                        <input type="submit" id="signup-submit" value="submit" class="lg-btn">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <div class="panels-container">
+
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New Here</h3>
+                    <p>please sign up here. use button</p>
+                    <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+                </div>
+    
+                <img src="./Image/undraw_interview_re_e5jn.svg" class="image" alt="sign up">
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Hey, Here</h3>
+                    <p>please sign in here. use button</p>
+                    <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                </div>
+    
+                <img src="./Image/undraw_check_boxes_re_v40f.svg" class="image" alt="sign up">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./JS/button.js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
