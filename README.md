@@ -1,4 +1,4 @@
-# Assignment-2-JS-
+# SignIn-SignOut--JS-Assignment-2
 
 A web page for Sign in and Sign up. 
 
